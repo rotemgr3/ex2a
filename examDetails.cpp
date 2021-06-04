@@ -12,15 +12,41 @@ const int mtmExam_duration = 3;
 const int days_in_month = 30;
 const std::string mtmExam_link = "https://tinyurl.com/59hzps6m";
 
-ExamDetails::ExamDetails(int course_number, int month, int day, double time, int duration, std::string link= "") : 
-    course_number(course_number),
-    month(month),
-    day(day),
-    time(time),
-    duration(duration),
-    link(link)
+ExamDetails::ExamDetails(int course_number, int month, int day, double time, int duration, std::string link= "")
 {
+    checkArgs(course_number, month, day, time, duration);
+    this->course_number = course_number;
+    this->month = month;
+    this->day = day;
+    this->time = time;
+    this->duration = duration;
+    this->link = link;
 }
+
+void checkArgs(int course_number, int month, int day, double time, int duration)
+{
+    if(course_number <= 0) { //check!!
+        throw InvalidArgsException();
+    }
+    if(month <= 0 || month > 13) {
+        throw InvalidDateException();
+    }
+    if(day < 1 || day > 30){
+        throw InvalidDateException();
+    }
+    if(time < 0 || time >= 24) {
+        throw InvalidTimeException();
+    }
+    double intpart;
+    double fract_part = std::modf(time, &intpart);
+    if(fract_part != 0.5 || fract_part != 0) {
+        throw InvalidTimeException();
+    }
+    if(duration <= 0) { //check!!
+        throw InvalidArgsException();
+    }
+}
+
 ExamDetails::ExamDetails(const ExamDetails& exam) : 
     course_number(exam.course_number) ,
     month(exam.month) , 
@@ -90,4 +116,6 @@ std::ostream& ExamDetails::operator<<(std::ostream& os, const ExamDetails& exam)
     }
     os << "Duration:" << exam.duration << ":00" << endl;
     os << "Zoom link:" << exam.link << endl;
+    return os;
 }
+
