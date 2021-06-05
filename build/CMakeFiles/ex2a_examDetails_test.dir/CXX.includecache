@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rotem.green/mtm/ex2a/examDetails.cpp
+iostream
+-
+string
+-
+examDetails.h
+/home/rotem.green/mtm/ex2a/examDetails.h
+cmath
+-
+
+/home/rotem.green/mtm/ex2a/examDetails.h
+string
+-
+iostream
+-
+

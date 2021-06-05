@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.0.0)
 set(CMAKE_CXX_STANDARD 11)
 
 # Set <PROJNAME> to be your project name. We set CXX (C++) here as the target language.
-project(<PROJNAME> VERSION 0.1.0 LANGUAGES CXX)
+project(ex2a_examDetails VERSION 0.1.0 LANGUAGES CXX)
 
 # If you want to see "under the hood" of CMake, uncomment this:
 # set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -18,6 +18,6 @@ set(CMAKE_CPP_FLAGS ${MTM_FLAGS_DEBUG})
 
 
 # Add the names of your source files here
-set(CPP_FILES <YOURFILENAMES>)
+set(CPP_FILES examDetails.cpp examDetails.h part_a_test.cpp)
 
-add_executable(exe_name ${CPP_FILES})
+add_executable(ex2a_examDetails_test ${CPP_FILES})

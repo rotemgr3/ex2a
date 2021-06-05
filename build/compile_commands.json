@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/rotem.green/mtm/ex2a/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/ex2a_examDetails_test.dir/examDetails.cpp.o -c /home/rotem.green/mtm/ex2a/examDetails.cpp",
+  "file": "/home/rotem.green/mtm/ex2a/examDetails.cpp"
+},
+{
+  "directory": "/home/rotem.green/mtm/ex2a/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.o -c /home/rotem.green/mtm/ex2a/part_a_test.cpp",
+  "file": "/home/rotem.green/mtm/ex2a/part_a_test.cpp"
+}
+]

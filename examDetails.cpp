@@ -4,7 +4,6 @@
 #include <cmath>
 
 using namespace mtm;
-
 const int mtmExam_course_number = 234124;
 const int mtmExam_month = 7;
 const int mtmExam_day = 28;
@@ -15,7 +14,7 @@ const int days_in_month = 30;
 
 ExamDetails::ExamDetails(int course_number, int month, int day, double time, int duration, std::string link)
 {
-    checkArgs(course_number, month, day, time, duration);
+    ExamDetails::checkArgs(course_number, month, day, time, duration);
     this->course_number = course_number;
     this->month = month;
     this->day = day;
@@ -102,22 +101,22 @@ bool ExamDetails::operator<(const ExamDetails& exam) const
     return false;
 }
 
-
-std::ostream& mtm::operator<<(std::ostream& os, const ExamDetails& exam)
-{
-    double intpart;
-    double fract_part = std::modf(exam.time, &intpart);
-    os << "Course Number:" << exam.course_number << std::endl;
-    os << "Time:" << exam.day << '.' << exam.month << "at";
-    if(fract_part == 0.5)
+namespace mtm {
+    std::ostream& operator<<(std::ostream& os, const ExamDetails& exam)
     {
-        os << intpart << ":30" << std::endl;
+        double intpart;
+        double fract_part = std::modf(exam.time, &intpart);
+        os << "Course Number:" << exam.course_number << std::endl;
+        os << "Time:" << exam.day << '.' << exam.month << "at";
+        if(fract_part == 0.5)
+        {
+            os << intpart << ":30" << std::endl;
+        }
+        else{
+            os << intpart << ":00" << std::endl;
+        }
+        os << "Duration:" << exam.duration << ":00" << std::endl;
+        os << "Zoom link:" << exam.link << std::endl;
+        return os;
     }
-    else{
-        os << intpart << ":00" << std::endl;
-    }
-    os << "Duration:" << exam.duration << ":00" << std::endl;
-    os << "Zoom link:" << exam.link << std::endl;
-    return os;
 }
-

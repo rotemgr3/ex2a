@@ -32,7 +32,7 @@ namespace mtm {
             double time;
             int duration;
             std::string link;
-            void checkArgs(int course_number, int month, int day, double time, int duration);
+            static void checkArgs(int course_number, int month, int day, double time, int duration);
     };
 };
 
