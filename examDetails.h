@@ -24,8 +24,7 @@ namespace mtm {
             class InvalidDateException {};
             class InvalidTimeException {};
             class InvalidArgsException {};
-            static void checkArgs(int course_number, int month, int day, double time, int duration);
-
+            
         private:
             int course_number;
             int month;
@@ -33,6 +32,7 @@ namespace mtm {
             double time;
             int duration;
             std::string link;
+            static void checkArgs(int course_number, int month, int day, double time, int duration);
             
     };
 }
