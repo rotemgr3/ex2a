@@ -6,4 +6,5 @@ CMakeFiles/ex2a_examDetails_test.dir/examDetails.cpp.o: ../examDetails.h
 
 CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.o: ../examDetails.h
 CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.o: ../part_a_test.cpp
+CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.o: ../sortedList.h
 

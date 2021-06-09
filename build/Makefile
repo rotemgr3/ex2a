@@ -73,17 +73,6 @@ CMAKE_BINARY_DIR = /home/rotem.green/mtm/ex2a/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/mtm/cmake-3.17.0-Linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -94,6 +83,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/home/mtm/cmake-3.17.0-Linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,17 +128,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ex2a_examDetails_test
+# Target rules for targets named ex2a_test
 
 # Build rule for target.
-ex2a_examDetails_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ex2a_examDetails_test
-.PHONY : ex2a_examDetails_test
+ex2a_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ex2a_test
+.PHONY : ex2a_test
 
 # fast build rule for target.
-ex2a_examDetails_test/fast:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/build
-.PHONY : ex2a_examDetails_test/fast
+ex2a_test/fast:
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/build
+.PHONY : ex2a_test/fast
 
 examDetails.o: examDetails.cpp.o
 
@@ -146,7 +146,7 @@ examDetails.o: examDetails.cpp.o
 
 # target to build an object file
 examDetails.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/examDetails.cpp.o
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.o
 .PHONY : examDetails.cpp.o
 
 examDetails.i: examDetails.cpp.i
@@ -155,7 +155,7 @@ examDetails.i: examDetails.cpp.i
 
 # target to preprocess a source file
 examDetails.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/examDetails.cpp.i
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.i
 .PHONY : examDetails.cpp.i
 
 examDetails.s: examDetails.cpp.s
@@ -164,7 +164,7 @@ examDetails.s: examDetails.cpp.s
 
 # target to generate assembly for a file
 examDetails.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/examDetails.cpp.s
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.s
 .PHONY : examDetails.cpp.s
 
 part_a_test.o: part_a_test.cpp.o
@@ -173,7 +173,7 @@ part_a_test.o: part_a_test.cpp.o
 
 # target to build an object file
 part_a_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.o
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.o
 .PHONY : part_a_test.cpp.o
 
 part_a_test.i: part_a_test.cpp.i
@@ -182,7 +182,7 @@ part_a_test.i: part_a_test.cpp.i
 
 # target to preprocess a source file
 part_a_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.i
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.i
 .PHONY : part_a_test.cpp.i
 
 part_a_test.s: part_a_test.cpp.s
@@ -191,7 +191,7 @@ part_a_test.s: part_a_test.cpp.s
 
 # target to generate assembly for a file
 part_a_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2a_examDetails_test.dir/build.make CMakeFiles/ex2a_examDetails_test.dir/part_a_test.cpp.s
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.s
 .PHONY : part_a_test.cpp.s
 
 # Help Target
@@ -202,7 +202,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ex2a_examDetails_test"
+	@echo "... ex2a_test"
 	@echo "... examDetails.o"
 	@echo "... examDetails.i"
 	@echo "... examDetails.s"

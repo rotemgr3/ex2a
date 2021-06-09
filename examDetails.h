@@ -13,6 +13,7 @@ namespace mtm {
                         int duration,
                         std::string link = "");
             ExamDetails(const ExamDetails& exam);
+            ExamDetails() = delete;
             ~ExamDetails() = default;
             static ExamDetails makeMatamExam();
             ExamDetails& operator=(const ExamDetails& exam);

@@ -22,7 +22,8 @@
         "system_error": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "string": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/.",
     "cmake.configureOnOpen": true
