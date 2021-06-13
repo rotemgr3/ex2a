@@ -2,7 +2,7 @@
 #define SORTED_LISTS_H_
 
 #include <assert.h>
-
+#include <stdexcept>
 namespace mtm {
 
     template<class T>
@@ -15,9 +15,11 @@ namespace mtm {
             ~Node() = default;
             explicit Node(const T val) : data(val), next(nullptr) {}
             Node(const Node<T>* node) : data(node->data), next(node->next) {}
+            friend class SortedList<T>;
+        private:
             T data;
             Node<T>* next;
-            friend class SortedList<T>;
+            
     };
 
     template<class T>
@@ -231,6 +233,9 @@ namespace mtm {
     template<class T>
     typename SortedList<T>::const_iterator& SortedList<T>::const_iterator::operator++()
     {
+        if(index >= this->sorted_list->length()){
+            throw std::out_of_range("Error: Iterator out of range.");
+        }
         ++index;
         return *this;
     }
