@@ -12,10 +12,20 @@ namespace mtm {
     const std::string mtmExam_link = "https://tinyurl.com/59hzps6m";
     const int days_in_month = 30;
     const double epsilon = 10e-6;
+    const std::string course_number_string = "Course Number: ";
+    const std::string time_string = "Time: ";
+    const char dot_char = '.';
+    const std::string at_string = " at "; 
+    const std::string half_hour_string = ":30";
+    const std::string rounded_hour_string = ":00";
+    const std::string duration_string = "Duration: ";
+    const std::string zoom_link_string = "Zoom Link: ";
+
+
 
     ExamDetails::ExamDetails(int course_number, int month, int day, double time, int duration, std::string link)
     {
-        ExamDetails::checkArgs(course_number, month, day, time, duration);
+        ExamDetails::checkArgs(month, day, time, duration);
         this->course_number = course_number;
         this->month = month;
         this->day = day;
@@ -24,11 +34,9 @@ namespace mtm {
         this->link = link;
     }
 
-    void ExamDetails::checkArgs(int course_number, int month, int day, double time, int duration)
+    void ExamDetails::checkArgs(int month, int day, double time, int duration)
     {
-        if(course_number <= 0) { //check!!
-            throw ExamDetails::InvalidArgsException();
-        }
+        /* No need to check course number */
         if(month <= 0 || month > 13) {
             throw ExamDetails::InvalidDateException();
         }
@@ -44,7 +52,7 @@ namespace mtm {
             && (fract_part < -epsilon || fract_part > epsilon)) {
             throw ExamDetails::InvalidTimeException();
         }
-        if(duration <= 0) { //check!!
+        if(duration <= 0) { 
             throw ExamDetails::InvalidArgsException();
         }
     }
@@ -106,17 +114,17 @@ namespace mtm {
     {
         double intpart;
         double fract_part = std::modf(exam.time, &intpart);
-        os << "Course Number: " << exam.course_number << std::endl;
-        os << "Time: " << exam.day << '.' << exam.month << " at ";
+        os << course_number_string << exam.course_number << std::endl;
+        os << time_string << exam.day << dot_char << exam.month << at_string;
         if(fract_part == 0.5)
         {
-            os << intpart << ":30" << std::endl;
+            os << intpart << half_hour_string << std::endl;
         }
         else{
-            os << intpart << ":00" << std::endl;
+            os << intpart << rounded_hour_string << std::endl;
         }
-        os << "Duration: " << exam.duration << ":00" << std::endl;
-        os << "Zoom Link: " << exam.link << std::endl;
+        os << duration_string << exam.duration << rounded_hour_string << std::endl;
+        os << zoom_link_string << exam.link << std::endl;
         return os;
     }
 }

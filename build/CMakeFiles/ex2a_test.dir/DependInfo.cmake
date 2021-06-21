@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rotem.green/mtm/ex2a/examDetails.cpp" "/home/rotem.green/mtm/ex2a/build/CMakeFiles/ex2a_test.dir/examDetails.cpp.o"
-  "/home/rotem.green/mtm/ex2a/part_a_test.cpp" "/home/rotem.green/mtm/ex2a/build/CMakeFiles/ex2a_test.dir/part_a_test.cpp.o"
+  "/home/rotem.green/mtm/ex2a/main.cpp" "/home/rotem.green/mtm/ex2a/build/CMakeFiles/ex2a_test.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

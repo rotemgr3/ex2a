@@ -140,59 +140,32 @@ ex2a_test/fast:
 	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/build
 .PHONY : ex2a_test/fast
 
-examDetails.o: examDetails.cpp.o
+main.o: main.cpp.o
 
-.PHONY : examDetails.o
-
-# target to build an object file
-examDetails.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.o
-.PHONY : examDetails.cpp.o
-
-examDetails.i: examDetails.cpp.i
-
-.PHONY : examDetails.i
-
-# target to preprocess a source file
-examDetails.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.i
-.PHONY : examDetails.cpp.i
-
-examDetails.s: examDetails.cpp.s
-
-.PHONY : examDetails.s
-
-# target to generate assembly for a file
-examDetails.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/examDetails.cpp.s
-.PHONY : examDetails.cpp.s
-
-part_a_test.o: part_a_test.cpp.o
-
-.PHONY : part_a_test.o
+.PHONY : main.o
 
 # target to build an object file
-part_a_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.o
-.PHONY : part_a_test.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-part_a_test.i: part_a_test.cpp.i
+main.i: main.cpp.i
 
-.PHONY : part_a_test.i
+.PHONY : main.i
 
 # target to preprocess a source file
-part_a_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.i
-.PHONY : part_a_test.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-part_a_test.s: part_a_test.cpp.s
+main.s: main.cpp.s
 
-.PHONY : part_a_test.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-part_a_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/part_a_test.cpp.s
-.PHONY : part_a_test.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2a_test.dir/build.make CMakeFiles/ex2a_test.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -203,12 +176,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex2a_test"
-	@echo "... examDetails.o"
-	@echo "... examDetails.i"
-	@echo "... examDetails.s"
-	@echo "... part_a_test.o"
-	@echo "... part_a_test.i"
-	@echo "... part_a_test.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

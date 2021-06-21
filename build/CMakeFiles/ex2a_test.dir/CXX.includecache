@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/rotem.green/mtm/ex2a/examDetails.h
-string
--
-iostream
--
-
-/home/rotem.green/mtm/ex2a/part_a_test.cpp
-iostream
--
+/home/rotem.green/mtm/ex2a/main.cpp
 sortedList.h
 /home/rotem.green/mtm/ex2a/sortedList.h
-examDetails.h
-/home/rotem.green/mtm/ex2a/examDetails.h
+assert.h
+-
+iostream
+-
+testClass.h
+/home/rotem.green/mtm/ex2a/testClass.h
 
 /home/rotem.green/mtm/ex2a/sortedList.h
 assert.h
+-
+stdexcept
+-
+
+/home/rotem.green/mtm/ex2a/testClass.h
+stdio.h
 -
 

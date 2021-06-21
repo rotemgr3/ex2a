@@ -1,85 +1,9 @@
-
-TEST 1.1
-the difference between MATAM and infi 2m is 17 days
-TEST 1.2
-your closest exam is:
-Course Number: 104032
-Time: 11.7 at 9:30
-Duration: 3:00
-Zoom Link: 
-
-
-TEST 1.3
-Course Number: 104032
-Time: 11.7 at 9:30
-Duration: 3:00
-Zoom Link: https://tinyurl.com/ym8wf46t
-
-
-TEST 1.4
-invalid date
-
-TEST 1.5
-Alice
-Bob
-Charlie
-Donald
-
-
-TEST 1.6
-Course Number: 104032
-Time: 11.7 at 9:30
-Duration: 3:00
-Zoom Link: https://tinyurl.com/ym8wf46t
-
-Course Number: 234124
-Time: 28.7 at 13:00
-Duration: 3:00
-Zoom Link: https://tinyurl.com/59hzps6m
-
-
-
-TEST 1.7
-Alice
-Bob
-Charlie
-Donald
-
-
-TEST 1.8
-3
-5
-6
-7
-
-
-TEST 1.9
-5
-6
-7
-
-
-TEST 1.10
-Course Number: 104032
-Time: 11.7 at 9:30
-Duration: 3:00
-Zoom Link: https://tinyurl.com/ym8wf46t
-
-Course Number: 234124
-Time: 28.7 at 13:00
-Duration: 3:00
-Zoom Link: https://tinyurl.com/59hzps6m
-
-
-----------
-Course Number: 104032
-Time: 11.7 at 9:30
-Duration: 3:00
-Zoom Link: https://tinyurl.com/ym8wf46t
-
-Course Number: 234124
-Time: 28.7 at 13:00
-Duration: 3:00
-Zoom Link: https://tinyurl.com/59hzps6m
-
-
+Running test1 - basics1... [OK]
+Running test2 - basics2... [OK]
+Running test3 - filter...  [OK]
+Running test4 - apply...   [OK]
+Running test5 - massive... [OK]
+Running test6 - double...  [OK]
+Running test8 - custom1... [OK]
+Running test9 - custom2... [OK]
+Running test10- iterator...[OK]

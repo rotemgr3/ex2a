@@ -61,7 +61,7 @@ int main()
     lst1.insert("Bob");
     lst1.insert("Alice");
     lst1.insert("Donald");
-
+    
     printList(lst1);
 
     TEST("1.6")

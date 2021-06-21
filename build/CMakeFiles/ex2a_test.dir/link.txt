@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/ex2a_test.dir/examDetails.cpp.o CMakeFiles/ex2a_test.dir/part_a_test.cpp.o  -o ex2a_test 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/ex2a_test.dir/main.cpp.o  -o ex2a_test 
